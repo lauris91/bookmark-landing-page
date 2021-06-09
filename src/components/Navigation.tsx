@@ -1,9 +1,9 @@
-import React from "react"
+import BookmarkLogo from "./BookmarkLogo"
 
 const Navigation = () => {
   return (
     <header>
-      <div className="logo"></div>
+      <BookmarkLogo fill="#242A45" />
       <div className="nav-items-container">
         <div className="nav-items-container--item">Features</div>
         <div className="nav-items-container--item">Pricing</div>

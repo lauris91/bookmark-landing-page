@@ -30,50 +30,51 @@ header {
   align-items: center;
   padding: 30px 10%;
   height: 100px;
+}
 
-  .logo {
-    background: url("../images/logo-bookmark.svg");
-    width: 148px;
-    height: 25px;
+.nav-items-container {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+
+  &--item {
+    color: $very-dark-blue;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+
+    &.footer {
+      color: white;
+      font-size: 0.8rem;
+    }
 
     &:hover {
+      color: $soft-red;
       cursor: pointer;
     }
   }
 
-  .nav-items-container {
-    display: flex;
-    align-items: center;
-    gap: 3vw;
+  &--login {
+    width: 100px;
 
-    &--item {
-      color: $very-dark-blue;
-      text-transform: uppercase;
-      font-size: 0.9rem;
+    button {
+      width: 100%;
+      padding: 10px;
+      background: $soft-red;
+      color: white;
 
       &:hover {
+        border: 1px solid $soft-red;
+        background: white;
         color: $soft-red;
         cursor: pointer;
       }
     }
+  }
+}
 
-    &--login {
-      width: 100px;
-
-      button {
-        width: 100%;
-        padding: 10px;
-        background: $soft-red;
-        color: white;
-
-        &:hover {
-          border: 1px solid $soft-red;
-          background: white;
-          color: $soft-red;
-          cursor: pointer;
-        }
-      }
-    }
+.logo {
+  &:hover {
+    cursor: pointer;
   }
 }
 
@@ -96,7 +97,8 @@ section {
 // }
 .simple-bookmark-container,
 .section-container,
-.extnesion-container {
+.extnesion-container,
+.footer-container {
   width: 90%;
 }
 
@@ -200,7 +202,7 @@ section {
     margin: 3vw 0;
 
     .extension {
-      width: 18%;
+      width: 15%;
       height: 300px;
       box-shadow: $box-shadow;
       display: flex;
@@ -228,7 +230,7 @@ section {
         border-bottom: 3px dotted $grayish-blue;
         width: 100%;
         text-align: center;
-        padding-bottom: 2vw;
+        padding-bottom: 1vw;
 
         &__name {
           color: $very-dark-blue;
@@ -260,6 +262,56 @@ section {
     }
   }
 
+  &__questions {
+    width: 40%;
+    padding: 2% 0;
+
+    .question-container {
+      border-bottom: 1px solid $grayish-blue;
+
+      &:first-child {
+        border-top: 1px solid $grayish-blue;
+      }
+    }
+
+    .question {
+      padding: 2ch 0;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 5%;
+      cursor: pointer;
+
+      &--title {
+        color: $very-dark-blue;
+        font-weight: 500;
+      }
+
+      &--icon {
+        mask: url("../images/icon-arrow.svg");
+        background-color: #5267df;
+        width: 18px;
+        height: 12px;
+        align-self: center;
+
+        &.close {
+          transform: scaleY(-1);
+          background-color: $soft-red;
+        }
+      }
+    }
+
+    .answer {
+      color: $grayish-blue;
+      line-height: 1.5;
+      padding: 3ch 0;
+      display: none;
+
+      &.show {
+        display: block;
+      }
+    }
+  }
+
   button {
     background-color: $soft-blue;
     color: white;
@@ -273,6 +325,99 @@ section {
       background-color: white;
       font-weight: 500;
       cursor: pointer;
+    }
+  }
+}
+
+.contacts-wrapper {
+  margin-top: 5%;
+  width: 100%;
+  background: $soft-blue;
+  display: flex;
+  justify-content: center;
+  padding: 1% 0;
+}
+
+.contacts-container {
+  display: inherit;
+  align-items: center;
+  flex-direction: column;
+  width: 25%;
+  padding: 3ch 0;
+  color: white;
+  gap: 2ch;
+
+  &--joined {
+    font-size: 0.8rem;
+    letter-spacing: 0.5ch;
+    text-transform: uppercase;
+  }
+
+  &--stay-up {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .contact-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    input {
+      border: none;
+      outline: none;
+      height: 45px;
+      border-radius: 3px;
+      width: 65%;
+      padding: 3%;
+      color: $very-dark-blue;
+
+      ::placeholder {
+        color: $grayish-blue;
+      }
+    }
+
+    .error {
+      background: url("../images/icon-error.svg") no-repeat right;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 57%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .error-msg {
+      width: 65%;
+      background: #fa5757;
+      color: white;
+      position: absolute;
+      bottom: -30px;
+      font-size: 0.7rem;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      padding: 0 3%;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      animation: error 0.5 ease-in-out;
+      //   -webkit-animation: error 0.5;
+    }
+
+    button {
+      height: 45px;
+      width: 30%;
+      background-color: $soft-red;
+      color: white;
+
+      &:hover {
+        cursor: pointer;
+        color: $soft-red;
+        background-color: white;
+        border: 1px solid $soft-red;
+      }
     }
   }
 }
@@ -310,5 +455,60 @@ section {
 
   .center {
     text-align: center;
+  }
+}
+
+footer {
+  background: $very-dark-blue;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+
+  .footer-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 5%;
+
+    .social-container {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      gap: 3%;
+      justify-content: flex-end;
+
+      &--item {
+        width: 24px;
+        height: 24px;
+
+        &:first-child {
+          mask: url("../images/icon-facebook.svg");
+          background-color: white;
+        }
+
+        &:last-child {
+          mask: url("../images/icon-twitter.svg");
+          background-color: white;
+          height: 20px;
+        }
+
+        &:hover {
+          background: $soft-red;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@keyframes error {
+  from {
+    // transform: translateY(0%);
+    background: red;
+  }
+
+  to {
+    // transform: translateY(100%);
+    background: yellow;
   }
 }
