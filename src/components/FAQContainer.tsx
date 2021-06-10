@@ -11,19 +11,19 @@ const questions = [
     id: 2,
     question: "How can i request a new browser?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
   },
   {
     id: 3,
     question: "Is there a mobile app?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet.",
   },
   {
     id: 4,
     question: "What about other Chromium browsers?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
   },
 ]
 
@@ -46,7 +46,13 @@ const FAQContainer = () => {
           {questions.map(({ question, answer, id }) => {
             const isOpened = opened === id
             return (
-              <div className="question-container" key={id}>
+              <div
+                // className="question-container"
+                className={`question-container ${isOpened ? "expand" : ""}`}
+                // style={{ height: isOpened ? "245px" : "66px" }}
+                // style={{ animation: "close-answer .4s" }}
+                key={id}
+              >
                 <div
                   className="question"
                   onClick={() => setOpened(isOpened ? null : id)}
@@ -56,9 +62,7 @@ const FAQContainer = () => {
                     className={`question--icon ${isOpened ? "close" : ""}`}
                   ></div>
                 </div>
-                <div className={`answer ${isOpened ? "show" : ""}`}>
-                  {answer}
-                </div>
+                {isOpened && <div className="answer">{answer}</div>}
               </div>
             )
           })}

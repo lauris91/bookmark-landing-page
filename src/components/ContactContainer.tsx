@@ -6,7 +6,7 @@ const ContactContainer = () => {
 
   useEffect(() => {
     if (!isValid) {
-      setTimeout(() => setIsValid(true), 20000)
+      setTimeout(() => setIsValid(true), 3000)
     }
   }, [isValid])
 
@@ -40,12 +40,12 @@ const ContactContainer = () => {
               onChange={(e) => setEmail(e.target.value)}
             ></input>
             <button>Contact Us</button>
-            {/* {!isValid && ( */}
-            <>
-              <span className="error"></span>
-              <div className="error-msg">Whoops, make sure it`s an email</div>
-            </>
-            {/* )} */}
+            {!isValid && (
+              <>
+                <span className="error"></span>
+                <div className="error-msg">Whoops, make sure it`s an email</div>
+              </>
+            )}
           </form>
         </div>
       </div>
