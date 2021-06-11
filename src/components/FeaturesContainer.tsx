@@ -33,46 +33,43 @@ const FeaturesContainer = () => {
           </div>
         </div>
 
-        <div className="section-container__navigation">
-          <div
-            className={`section-container__navigation--item ${
-              tab === 0 ? "active" : ""
-            }`}
-            onClick={() => setTab(0)}
-          >
-            Simple Bookmarking
+        <div className="section-container__feature">
+          <div className="section-container__feature--navigation">
+            <div
+              className={`item ${tab === 0 ? "active" : ""}`}
+              onClick={() => setTab(0)}
+            >
+              Simple Bookmarking
+            </div>
+            <div
+              className={`item ${tab === 1 ? "active" : ""}`}
+              onClick={() => setTab(1)}
+            >
+              Speedy Searching
+            </div>
+            <div
+              className={`item ${tab === 2 ? "active" : ""}`}
+              onClick={() => setTab(2)}
+            >
+              Easy sharing
+            </div>
           </div>
-          <div
-            className={`section-container__navigation--item ${
-              tab === 1 ? "active" : ""
-            }`}
-            onClick={() => setTab(1)}
-          >
-            Speedy Searching
-          </div>
-          <div
-            className={`section-container__navigation--item ${
-              tab === 2 ? "active" : ""
-            }`}
-            onClick={() => setTab(2)}
-          >
-            Easy sharing
-          </div>
-        </div>
 
-        <div className={`section-container__feature bg-${tab}`}>
-          <div className="text-container">
-            <div className="text-container--title small">
-              {featuresData[tab].title}
+          <div className="section-container__feature--content">
+            <div className={`bg bg-${tab}`}></div>
+            <div className="text-container">
+              <div className="text-container--title small">
+                {featuresData[tab].title}
+              </div>
+              <div className="text-container--description">
+                {featuresData[tab].description}
+              </div>
+              <button>More Info</button>
             </div>
-            <div className="text-container--description">
-              {featuresData[tab].description}
-            </div>
-            <button>More Info</button>
           </div>
         </div>
       </div>
-      <div className="blue-bg-container-feature"></div>
+      {/* <div className="blue-bg-container-feature"></div> */}
     </section>
   )
 }

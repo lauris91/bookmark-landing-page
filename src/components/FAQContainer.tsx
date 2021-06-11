@@ -1,4 +1,5 @@
-import { useState } from "react"
+import React, { useState } from "react"
+import { CSSTransition } from "react-transition-group"
 
 const questions = [
   {
@@ -43,29 +44,35 @@ const FAQContainer = () => {
           </div>
         </div>
         <div className="section-container__questions">
+          {/* <TransitionGroup className="section-container__questions"> */}
           {questions.map(({ question, answer, id }) => {
             const isOpened = opened === id
             return (
-              <div
-                // className="question-container"
-                className={`question-container ${isOpened ? "expand" : ""}`}
-                // style={{ height: isOpened ? "245px" : "66px" }}
-                // style={{ animation: "close-answer .4s" }}
-                key={id}
-              >
-                <div
-                  className="question"
-                  onClick={() => setOpened(isOpened ? null : id)}
+              <div className="question-container" key={id}>
+                <CSSTransition
+                  in={isOpened}
+                  classNames="expand"
+                  addEndListener={(node: HTMLElement, done: () => void) => {
+                    node.addEventListener("transitionend", done, false)
+                  }}
                 >
-                  <div className="question--title">{question}</div>
-                  <div
-                    className={`question--icon ${isOpened ? "close" : ""}`}
-                  ></div>
-                </div>
-                {isOpened && <div className="answer">{answer}</div>}
+                  <React.Fragment>
+                    <div
+                      className="question"
+                      onClick={() => setOpened(isOpened ? null : id)}
+                    >
+                      <div className="question--title">{question}</div>
+                      <div
+                        className={`question--icon ${isOpened ? "close" : ""}`}
+                      ></div>
+                    </div>
+                    {isOpened && <div className="answer">{answer}</div>}
+                  </React.Fragment>
+                </CSSTransition>
               </div>
             )
           })}
+          {/* </TransitionGroup> */}
         </div>
         <button>More Info</button>
       </div>
