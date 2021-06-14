@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import { useState } from "react"
+import { CSSTransition, SwitchTransition } from "react-transition-group"
 
 const featuresData = [
   {
@@ -55,18 +56,32 @@ const FeaturesContainer = () => {
             </div>
           </div>
 
-          <div className="section-container__feature--content">
-            <div className={`bg bg-${tab}`}></div>
-            <div className="text-container">
-              <div className="text-container--title small">
-                {featuresData[tab].title}
+          <SwitchTransition>
+            <CSSTransition
+              key={tab}
+              classNames="fade"
+              addEndListener={(node: HTMLElement, done: () => void) => {
+                node.addEventListener("transitionend", done, false)
+              }}
+              timeout={{
+                enter: 500,
+                exit: 500,
+              }}
+            >
+              <div className="section-container__feature--content">
+                <div className={`bg bg-${tab}`}></div>
+                <div className="text-container">
+                  <div className="text-container--title small">
+                    {featuresData[tab].title}
+                  </div>
+                  <div className="text-container--description">
+                    {featuresData[tab].description}
+                  </div>
+                  <button>More Info</button>
+                </div>
               </div>
-              <div className="text-container--description">
-                {featuresData[tab].description}
-              </div>
-              <button>More Info</button>
-            </div>
-          </div>
+            </CSSTransition>
+          </SwitchTransition>
         </div>
       </div>
       {/* <div className="blue-bg-container-feature"></div> */}

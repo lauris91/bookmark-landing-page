@@ -1,0 +1,122 @@
+button {
+  font-family: $font-fmaily;
+  border: none;
+  outline: none;
+  box-shadow: $box-shadow;
+  border-radius: 3px;
+  transition: background 0.3s;
+}
+
+.nav-items-container {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+
+  @media screen and (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  &--item {
+    color: $very-dark-blue;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+
+    &.footer {
+      color: white;
+      font-size: 0.8rem;
+    }
+
+    &:hover {
+      color: $soft-red;
+      cursor: pointer;
+    }
+  }
+
+  &--login {
+    width: 100px;
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: $soft-red;
+      color: white;
+
+      &:hover {
+        border: 1px solid $soft-red;
+        background: white;
+        color: $soft-red;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.logo {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 3ch 2ch 0;
+  gap: 2vw;
+
+  @media screen and (max-width: $desktops) {
+    width: 75%;
+  }
+
+  @media screen and (max-width: $tablets) {
+    width: 100%;
+    gap: 20px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding: 10%;
+    align-items: center;
+  }
+
+  &--title {
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: $very-dark-blue;
+
+    &.small {
+      font-size: 2rem;
+    }
+  }
+
+  &--description {
+    color: $grayish-blue;
+    line-height: 1.5;
+  }
+
+  .center {
+    text-align: center;
+  }
+}
+
+.blue-bg-container {
+  background: $soft-blue;
+  width: 40%;
+  height: 350px;
+  position: absolute;
+  z-index: -10;
+
+  &-simple-bookmark {
+    border-bottom-left-radius: 40%;
+    border-top-left-radius: 40%;
+    bottom: 0;
+    right: 0;
+  }
+
+  &-feature {
+    border-bottom-right-radius: 40%;
+    border-top-right-radius: 40%;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+  }
+}
