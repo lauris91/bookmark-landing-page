@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/bookmark-landing-page/static/css/main.d6948ee2.chunk.css",
+    "main.js": "/bookmark-landing-page/static/js/main.274cd4d7.chunk.js",
+    "main.js.map": "/bookmark-landing-page/static/js/main.274cd4d7.chunk.js.map",
+    "runtime-main.js": "/bookmark-landing-page/static/js/runtime-main.3102ae14.js",
+    "runtime-main.js.map": "/bookmark-landing-page/static/js/runtime-main.3102ae14.js.map",
+    "static/js/2.dfc64820.chunk.js": "/bookmark-landing-page/static/js/2.dfc64820.chunk.js",
+    "static/js/2.dfc64820.chunk.js.map": "/bookmark-landing-page/static/js/2.dfc64820.chunk.js.map",
+    "index.html": "/bookmark-landing-page/index.html",
+    "static/css/main.d6948ee2.chunk.css.map": "/bookmark-landing-page/static/css/main.d6948ee2.chunk.css.map",
+    "static/js/2.dfc64820.chunk.js.LICENSE.txt": "/bookmark-landing-page/static/js/2.dfc64820.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/bookmark-landing-page/static/media/logo-opera.ff14e476.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3102ae14.js",
+    "static/js/2.dfc64820.chunk.js",
+    "static/css/main.d6948ee2.chunk.css",
+    "static/js/main.274cd4d7.chunk.js"
+  ]
+}
