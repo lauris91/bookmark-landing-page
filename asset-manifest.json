@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/bookmark-landing-page/static/css/main.95bf2d27.chunk.css",
-    "main.js": "/bookmark-landing-page/static/js/main.9456cb5e.chunk.js",
-    "main.js.map": "/bookmark-landing-page/static/js/main.9456cb5e.chunk.js.map",
+    "main.css": "/bookmark-landing-page/static/css/main.ea703a44.chunk.css",
+    "main.js": "/bookmark-landing-page/static/js/main.c1466b31.chunk.js",
+    "main.js.map": "/bookmark-landing-page/static/js/main.c1466b31.chunk.js.map",
     "runtime-main.js": "/bookmark-landing-page/static/js/runtime-main.3102ae14.js",
     "runtime-main.js.map": "/bookmark-landing-page/static/js/runtime-main.3102ae14.js.map",
-    "static/js/2.f1cd9e47.chunk.js": "/bookmark-landing-page/static/js/2.f1cd9e47.chunk.js",
-    "static/js/2.f1cd9e47.chunk.js.map": "/bookmark-landing-page/static/js/2.f1cd9e47.chunk.js.map",
+    "static/js/2.dfc64820.chunk.js": "/bookmark-landing-page/static/js/2.dfc64820.chunk.js",
+    "static/js/2.dfc64820.chunk.js.map": "/bookmark-landing-page/static/js/2.dfc64820.chunk.js.map",
     "index.html": "/bookmark-landing-page/index.html",
-    "static/css/main.95bf2d27.chunk.css.map": "/bookmark-landing-page/static/css/main.95bf2d27.chunk.css.map",
-    "static/js/2.f1cd9e47.chunk.js.LICENSE.txt": "/bookmark-landing-page/static/js/2.f1cd9e47.chunk.js.LICENSE.txt",
+    "static/css/main.ea703a44.chunk.css.map": "/bookmark-landing-page/static/css/main.ea703a44.chunk.css.map",
+    "static/js/2.dfc64820.chunk.js.LICENSE.txt": "/bookmark-landing-page/static/js/2.dfc64820.chunk.js.LICENSE.txt",
     "static/media/styles.scss": "/bookmark-landing-page/static/media/logo-opera.ff14e476.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.3102ae14.js",
-    "static/js/2.f1cd9e47.chunk.js",
-    "static/css/main.95bf2d27.chunk.css",
-    "static/js/main.9456cb5e.chunk.js"
+    "static/js/2.dfc64820.chunk.js",
+    "static/css/main.ea703a44.chunk.css",
+    "static/js/main.c1466b31.chunk.js"
   ]
 }
