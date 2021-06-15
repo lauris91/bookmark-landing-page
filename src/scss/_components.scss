@@ -70,6 +70,7 @@ button {
     position: absolute;
     background: $very-dark-blue;
     height: 100vh;
+    min-height: 349px;
     top: 0;
     left: 0;
     width: 100%;
@@ -106,7 +107,8 @@ button {
         width: 80%;
         color: white;
         font-weight: 500;
-        font-size: 1.75rem;
+        // font-size: 1.75rem;
+        font-size: 4vw;
         text-transform: uppercase;
       }
 
@@ -115,7 +117,8 @@ button {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100px;
+        // height: 100px;
+        height: 10vw;
 
         &:first-child {
           border-top: 1px white solid;
@@ -124,10 +127,11 @@ button {
 
       button {
         margin-top: 30px;
-        border: 2px solid white;
+        border: 1px solid white;
         border-radius: 10px;
         background: unset;
-        height: 70px;
+        // height: 70px;
+        height: 9vw;
       }
     }
 

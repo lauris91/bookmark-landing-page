@@ -1,5 +1,6 @@
 .wrapper {
   margin: 0 auto;
+  max-width: 110rem;
 }
 
 header {
@@ -292,10 +293,10 @@ section {
       }
 
       &--info {
-        border-bottom: 3px dotted $grayish-blue;
         width: 100%;
         text-align: center;
         padding-bottom: 1vw;
+        background: url("../images/bg-dots.svg") bottom no-repeat;
 
         &__name {
           color: $very-dark-blue;

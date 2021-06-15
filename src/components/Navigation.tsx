@@ -1,5 +1,4 @@
 import React, { useState, Fragment } from "react"
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock"
 
 import BookmarkLogo from "./BookmarkLogo"
 
@@ -10,9 +9,7 @@ interface NavigationProps {
 const Navigation: React.FunctionComponent<NavigationProps> = ({ isHeader }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
 
-  showMobileMenu
-    ? disableBodyScroll(document.body)
-    : enableBodyScroll(document.body)
+  document.body.style.position = showMobileMenu ? "fixed" : ""
 
   return (
     <Fragment>

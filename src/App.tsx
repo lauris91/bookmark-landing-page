@@ -9,18 +9,16 @@ import ContactContainer from "./components/ContactContainer"
 
 function App() {
   return (
-    <div className="wrapper">
+    <div className="wrapper" id="wrapper">
       <header>
         <BookmarkLogo fill="#242A45" />
         <Navigation isHeader />
       </header>
-      <div className="page-content">
-        <SimpleBookmarContainer />
-        <FeaturesContainer />
-        <ExtensionContainer />
-        <FAQContainer />
-        <ContactContainer />
-      </div>
+      <SimpleBookmarContainer />
+      <FeaturesContainer />
+      <ExtensionContainer />
+      <FAQContainer />
+      <ContactContainer />
       <Footer />
     </div>
   )
