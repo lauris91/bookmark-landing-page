@@ -1,5 +1,4 @@
-import React from "react"
-
+import BookmarkLogo from "./components/BookmarkLogo"
 import Navigation from "./components/Navigation"
 import SimpleBookmarContainer from "./components/SimpleBookmarkContainer"
 import FeaturesContainer from "./components/FeaturesContainer"
@@ -11,7 +10,10 @@ import ContactContainer from "./components/ContactContainer"
 function App() {
   return (
     <div className="wrapper">
-      <Navigation />
+      <header>
+        <BookmarkLogo fill="#242A45" />
+        <Navigation isHeader />
+      </header>
       <div className="page-content">
         <SimpleBookmarContainer />
         <FeaturesContainer />
